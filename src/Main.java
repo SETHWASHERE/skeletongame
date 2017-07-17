@@ -20,82 +20,65 @@ public class Main {
                 herolevel += 1;
             }
 
-            if (herolevel == 2) {
+            if (herolevel == 2)
+            {
                 herohp += 2;
                 heroattack += 2;
                 herodefense += 2;
             }
-            if (herolevel == 3) {
+            if (herolevel == 3)
+            {
                 herohp += 3;
-                return herohp;
                 heroattack += 5;
-                return heroattack;
                 herodefense += 2;
-                return herodefense;
             }
-            if (herolevel == 4) {
+            if (herolevel == 4)
+            {
                 herohp += 5;
-                return herohp;
                 heroattack += 6;
-                return heroattack;
                 herodefense += 2;
-                return herodefense;
             }
-            if (herolevel == 5) {
+            if (herolevel == 5)
+            {
                 herohp += 5;
-                return herohp;
                 heroattack += 10;
-                return heroattack;
                 herodefense += 2;
-                return herodefense;
             }
-            if (herolevel == 6) {
+            if (herolevel == 6)
+            {
                 herohp += 5;
-                return herohp;
                 heroattack += 10;
-                return heroattack;
                 herodefense += 3;
-                return herodefense;
             }
-            if (herolevel == 7) {
+            if (herolevel == 7)
+            {
                 herohp += 7;
-                return herohp;
                 heroattack += 10;
-                return heroattack;
                 herodefense += 3;
-                return herodefense;
             }
-            if (herolevel == 8) {
+            if (herolevel == 8)
+            {
                 herohp += 7;
-                return herohp;
                 heroattack += 20;
-                return heroattack;
                 herodefense += 2;
-                return herodefense;
             }
-            if (herolevel == 9) {
+            if (herolevel == 9)
+            {
                 herohp += 9;
-                return herohp;
                 heroattack += 20;
-                return heroattack;
                 herodefense += 2;
-                return herodefense;
             }
-            if (herolevel == 10) {
+            if (herolevel == 10)
+            {
                 herohp += 5;
-                return herohp;
                 heroattack += 30;
-                return heroattack;
                 herodefense += 3;
-                return herodefense;
             }
-            if (herolevel == 11) {
-                herohp = 999;
-                return herohp;
-                heroattack = 999;
-                return heroattack;
-                herodefense = 999;
-                return herodefense;
+            if (herolevel == 11)
+            {
+                herohp += 999;
+                heroattack += 999;
+                herodefense += 999;
             }
         }
 
