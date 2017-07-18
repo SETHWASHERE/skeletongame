@@ -1,42 +1,38 @@
 import edu.digipen.gameobject.GameObject;
 
-import java.awt.event.KeyEvent;
-
 /**
- * Created by seth.riedy on 7/17/2017.
+ * Created by seth.riedy on 7/18/2017.
  */
-public class skeleton extends GameObject
-{
+public class guard2 extends GameObject {
+
     int exp = 0;
     int herolevel = 1;
     int heroattack = 7;
     int herodefense = 2;
     int herohp = 10;
 
-    int skeletonattack = 4;
-    int skeletonenemyhp = 20;
+    int guard2attack = 23;
+    int guard2enemyhp = 211;
     boolean turn = true;
 
-    public skeleton()
+    public guard2()
     {
-        super("skeleton", 64, 64, "");
+        super("guard2attack", 64, 64, "");
     }
 
-    public void update()
-    {
-        if (skeletonenemyhp > 0)
+    public void update() {
+        if (guard2enemyhp > 0)
         {
             while (turn == true)
             {
-                herohp -= skeletonattack;
+                herohp -= guard2attack;
 
                 turn = false;
             }
         }
-        if (skeletonenemyhp == 0)
-        {
+        if (guard2enemyhp == 0) {
             System.out.println("enemy defeated!");
-            exp += 10;
+            exp += 90;
             turn = true;
         }
     }

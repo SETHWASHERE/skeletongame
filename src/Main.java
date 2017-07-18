@@ -12,27 +12,6 @@ public class Main {
         int herodefense = 2;
         int herohp = 10;
 
-        int skeletonattack = 4;
-        int skeletonenemyhp = 20;
-
-        boolean turn = false;
-        while (skeletonenemyhp <= 0);
-        {
-            herohp -= skeletonattack;
-            boolean turn1 = true;
-
-            if (turn1)
-            {
-                skeletonenemyhp -= heroattack;
-            }
-        }
-
-        if (skeletonenemyhp == 0)
-        {
-            System.out.println("enemy defeated!");
-            exp += 10;
-        }
-
         //hero level design 1-11(stat increases, etc.)
         while (herolevel != 11)
         {
