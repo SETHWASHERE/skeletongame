@@ -11,12 +11,12 @@ import java.rmi.server.Skeleton;
 /**
  * Created by seth.riedy on 7/19/2017.
  */
-public class Level1 extends GameLevel
+public class Level4 extends GameLevel
 {
     Hero_Player activePlayer;
     Enemy currentEnemy;
 
-    skeleton firstEnemy;
+    representative firstEnemy;
     boolean turn;
 
     @Override
@@ -25,10 +25,9 @@ public class Level1 extends GameLevel
         activePlayer = Hero;
         ObjectManager.addGameObject(Hero);
 
-        firstEnemy = new skeleton("Skeleton",200, 200, "pixil-frame-0.png");
+        firstEnemy = new representative("Representative",200, 200, "kimjongun.png");
         firstEnemy.currentPlayer = activePlayer;
         firstEnemy.setOpacity(1);
-//        firstEnemy.setPosition(0,0);
         ObjectManager.addGameObject(firstEnemy);
 
 
@@ -65,20 +64,20 @@ public class Level1 extends GameLevel
             if (InputManager.isTriggered(KeyEvent.VK_I))
             {
                 System.out.println("You reach into your inventory...\n" + "and pull out, a POTION!");
-                    activePlayer.hp += 3;
+                activePlayer.hp += 6;
                 {
                     turn = true;
                     System.out.println("Enemy  Health: " + currentEnemy.currentHealth);
                 }
             }
-            }
+        }
         if(currentEnemy.currentHealth <= 0)
         {
-            activePlayer.hp += 2;
-            activePlayer.attack += 2;
-            GameLevelManager.goToLevel(new Level2());
+            activePlayer.hp += 5;
+            activePlayer.attack += 10;
+            GameLevelManager.goToLevel(new Level5());
         }
-        if (activePlayer.hp <= 0)
+        if(activePlayer.hp <= 0)
         {
             Game.quit();
         }
@@ -89,3 +88,5 @@ public class Level1 extends GameLevel
 
     }
 }
+
+

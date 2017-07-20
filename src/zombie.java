@@ -3,37 +3,13 @@ import edu.digipen.gameobject.GameObject;
 /**
 * Created by seth.riedy on 7/18/2017.
         */
-public class zombie extends GameObject {
-
-    int exp = 0;
-    int herolevel = 1;
-    int heroattack = 7;
-    int herodefense = 2;
-    int herohp = 10;
-
-    int zombieattack = 6;
-    int zombieenemyhp = 30;
-    boolean turn = true;
-
-    public zombie()
-    {
-        super("zombie", 64, 64, "");
-    }
-
-    public void update() {
-        if (zombieenemyhp > 0)
-        {
-            while (turn == true)
-            {
-                herohp -= zombieattack;
-
-                turn = false;
-            }
-        }
-        if (zombieenemyhp == 0) {
-            System.out.println("enemy defeated!");
-            exp += 20;
-            turn = true;
-        }
+public class zombie extends Enemy
+{
+    public zombie(String name_, int width_, int height_, String textureName_) {
+        super(name_, width_, height_, textureName_);
+        expGiven = 20;
+        attack = 5;
+        totalHealth = 30;
+        currentHealth = totalHealth;
     }
 }

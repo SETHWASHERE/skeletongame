@@ -12,6 +12,7 @@ public class skeleton extends Enemy
         expGiven = 10;
         attack = 4;
         totalHealth = 20;
+        currentHealth = totalHealth;
     }
 
 

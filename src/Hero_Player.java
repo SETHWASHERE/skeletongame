@@ -16,6 +16,7 @@ public class Hero_Player extends GameObject {
     int totalhp = 10;
     int healAmount = 1;
     boolean turn = true;
+    int PlayerLevel = 1;
 
 //    int skeletonattack = 4;
 //    int skeletonenemyhp = 20;
@@ -39,12 +40,12 @@ public class Hero_Player extends GameObject {
 //    int receptionistenemyhp = 10000;
 
     public Hero_Player() {
-        super("Hero_player", 64, 64, "");
+        super("Hero_player", 64, 64, "Hero_Asian.png");
+        setPosition(-90, -76);
         hp = totalhp;
     }
 
-    public void gainExp(int amount)
-    {
+    public void gainExp(int amount) {
         exp += amount;
         if (exp == 10 || exp == 30 || exp == 60 || exp == 100 || exp == 150 || exp == 210 || exp == 280 || exp == 360 || exp == 450 || exp == 1000) {
             level += 1;
@@ -53,15 +54,14 @@ public class Hero_Player extends GameObject {
     }
 
     public void update() {
-
+/*
         while (turn == false)
         {
             System.out.println("Attack(A) || Die(D) || Heal(I)");
 
-            if (InputManager.isTriggered(KeyEvent.VK_D))
+            if (totalhp <= 0)
             {
-                hp = 0;
-                System.out.println("you imploded.");
+                System.out.println("You couldn't change your name...\n" + "Game Over!");
             }
             if (InputManager.isTriggered(KeyEvent.VK_I))
             {
@@ -179,6 +179,7 @@ public class Hero_Player extends GameObject {
                     }
                 }
             }
-        }
+        }*/
     }
+}
 
